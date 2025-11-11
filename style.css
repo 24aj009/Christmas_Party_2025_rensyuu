@@ -1,0 +1,91 @@
+body {
+  font-family: "Roboto Slab", "Noto Sans JP", sans-serif;
+  background-color: #fdfdfd;
+  overflow-x: hidden;
+}
+
+/* 背景（あれば画像差し替えOK） */
+.background {
+  background-image: url('img/backboard.svg');
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.12;
+}
+
+/* ヘッダー文字版 */
+.title-text {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #e74c3c;
+}
+.subtitle-text {
+  font-size: 1.1rem;
+  color: #333;
+  margin-top: 0.5rem;
+}
+
+/* 赤・緑の丸 */
+.circle-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.05rem;
+  text-align: center;
+}
+.red-circle { background-color: #e74c3c; }
+.green-circle { background-color: #27ae60; }
+
+/* 白いカード */
+.section-box {
+  background-color: #fff;
+  border-radius: 20px;
+  text-align: left;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  padding: 2rem 2rem;
+}
+.section-box h2 {
+  color: #e74c3c;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.section-box ul {
+  padding-left: 1.4rem;
+}
+.section-box li {
+  margin-bottom: 0.3rem;
+}
+.big-date {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* スマホ調整 */
+@media (max-width: 768px) {
+  .title-text {
+    font-size: 1.8rem;
+  }
+  .circle {
+    width: 100px;
+    height: 100px;
+    font-size: 0.9rem;
+  }
+  .section-box {
+    margin: 0 0 1.5rem 0;
+    padding: 1.5rem 1.2rem;
+  }
+}
